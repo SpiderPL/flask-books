@@ -3,6 +3,6 @@ Flask-SQLAlchemy
 flask-smorest
 gunicorn
 marshmallow
-python-dotenv
 psycopg2-binary
 pytest
+black

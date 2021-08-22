@@ -13,4 +13,4 @@ class Book(db.Model):
     image = db.Column(db.String, nullable=True)
 
     def __repr__(self):
-        return '<Title %r>' % self.title
+        return "<Title %r>" % self.title

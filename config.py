@@ -18,13 +18,16 @@ class Config:
     OPENAPI_SWAGGER_UI_URL = "https://cdn.jsdelivr.net/npm/swagger-ui-dist/"
     JSON_AS_ASCII = False
 
-    SQLALCHEMY_DATABASE_URI = DATABASE_URL = os.getenv('DATABASE_URL',
-                                                       'postgresql://postgres:example@localhost/postgres').replace(
-        "postgres://", "postgresql://")
+    SQLALCHEMY_DATABASE_URI = os.getenv(
+        "DATABASE_URL", "postgresql://postgres:example@localhost/postgres"
+    ).replace("postgres://", "postgresql://")
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
 class DebugConfig(Config):
     DEBUG = True
+
+
+class TestConfig(Config):
     TESTING = True

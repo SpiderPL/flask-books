@@ -6,3 +6,11 @@ pip-install:
 
 docker-up:
 	docker-compose up
+
+test:
+	pytest .
+
+.PHONY: test
+
+fmt:
+	black .
